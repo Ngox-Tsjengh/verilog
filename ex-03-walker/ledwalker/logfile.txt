@@ -1,0 +1,12 @@
+SBY 15:43:00 [ledwalker] Removing directory 'ledwalker'.
+SBY 15:43:00 [ledwalker] Copy 'ledwalker.v' to 'ledwalker/src/ledwalker.v'.
+SBY 15:43:00 [ledwalker] engine_0: smtbmc
+SBY 15:43:00 [ledwalker] base: starting process "cd ledwalker/src; yosys -ql ../model/design.log ../model/design.ys"
+SBY 15:43:00 [ledwalker] base: finished (returncode=0)
+SBY 15:43:00 [ledwalker] smt2: starting process "cd ledwalker/model; yosys -ql design_smt2.log design_smt2.ys"
+SBY 15:43:00 [ledwalker] smt2: ERROR: No such command: dffunmap (type 'help' for a command overview)
+SBY 15:43:00 [ledwalker] smt2: finished (returncode=1)
+SBY 15:43:00 [ledwalker] smt2: job failed. ERROR.
+SBY 15:43:00 [ledwalker] summary: Elapsed clock time [H:MM:SS (secs)]: 0:00:00 (0)
+SBY 15:43:00 [ledwalker] summary: Elapsed process time [H:MM:SS (secs)]: 0:00:00 (0)
+SBY 15:43:00 [ledwalker] DONE (ERROR, rc=16)

@@ -1,0 +1,14 @@
+[options]
+mode prove
+
+[engines]
+smtbmc
+
+[script]
+read -formal my_design.v
+
+prep -top my_design
+
+[files]
+my_design.v
+

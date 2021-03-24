@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites disabled="0" errors="1" failures="0" tests="1" time="0">
+<testsuite disabled="0" errors="1" failures="0" name="ledwalker" skipped="0" tests="1" time="0">
+<properties>
+<property name="os" value="posix"/>
+</properties>
+<testcase classname="ledwalker" name="default" status="ERROR" time="0">
+<error message="ERROR" type="ERROR"/>
+<system-out>SBY 15:43:00 [ledwalker] Removing directory 'ledwalker'.
+SBY 15:43:00 [ledwalker] Copy 'ledwalker.v' to 'ledwalker/src/ledwalker.v'.
+SBY 15:43:00 [ledwalker] engine_0: smtbmc
+SBY 15:43:00 [ledwalker] base: starting process &quot;cd ledwalker/src; yosys -ql ../model/design.log ../model/design.ys&quot;
+SBY 15:43:00 [ledwalker] base: finished (returncode=0)
+SBY 15:43:00 [ledwalker] smt2: starting process &quot;cd ledwalker/model; yosys -ql design_smt2.log design_smt2.ys&quot;
+SBY 15:43:00 [ledwalker] smt2: ERROR: No such command: dffunmap (type 'help' for a command overview)
+SBY 15:43:00 [ledwalker] smt2: finished (returncode=1)
+SBY 15:43:00 [ledwalker] smt2: job failed. ERROR.
+SBY 15:43:00 [ledwalker] summary: Elapsed clock time [H:MM:SS (secs)]: 0:00:00 (0)
+SBY 15:43:00 [ledwalker] summary: Elapsed process time [H:MM:SS (secs)]: 0:00:00 (0)
+SBY 15:43:00 [ledwalker] DONE (ERROR, rc=16)
+</system-out></testcase></testsuite></testsuites>
