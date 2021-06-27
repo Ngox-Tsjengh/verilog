@@ -5,7 +5,7 @@ VERILATOR=verilator
 VERILATOR_ROOT ?= $(shell bash -c 'verilator -V|grep VERILATOR_ROOT | head -1 | sed -e "s/^.*=\s*//"')
 VINC := $(VERILATOR_ROOT)/include
 
-.PHONY: all av
+.PHONY: all wave
 all: $(Target)
 
 obj_dir/$(SimFile).cpp: $(Target).v

@@ -1,4 +1,4 @@
-// Verilated -*- C++ -*-
+// Verilated -*- SystemC -*-
 // DESCRIPTION: Verilator output: Symbol table implementation internals
 
 #include "Vmy_design__Syms.h"
@@ -15,8 +15,6 @@ Vmy_design__Syms::Vmy_design__Syms(VerilatedContext* contextp, Vmy_design* topp,
     // Setup locals
     : VerilatedSyms{contextp}
     , __Vm_namep(namep)
-    , __Vm_activity(false)
-    , __Vm_baseCode(0)
     , __Vm_didInit(false)
     // Setup submodule names
 {

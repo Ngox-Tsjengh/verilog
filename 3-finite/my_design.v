@@ -31,9 +31,7 @@ module my_design(i_clk, o_led);
 			default:o_led <= 8'h01;
 		endcase
 	end
-
 endmodule
-
 
 `ifdef FORMAL
 	always @(*) begin
@@ -70,5 +68,4 @@ endmodule
 		// assert($onehot(o_led));
 		// and avoided this case statement entirely.
 	end
-
 `endif

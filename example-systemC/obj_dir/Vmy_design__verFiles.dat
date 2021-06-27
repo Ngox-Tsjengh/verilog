@@ -1,0 +1,13 @@
+# DESCRIPTION: Verilator output: Timestamp data for --skip-identical.  Delete at will.
+C "-Wall --sc --exe my_design.cpp my_design.v"
+S   5652192 21216243  1618467797           0  1615578396           0 "/usr/local/Cellar/verilator/4.200/bin/verilator_bin"
+S       179 25830418  1620107952           0  1620107952           0 "my_design.v"
+T      4486 25830831  1620108428           0  1620108428           0 "obj_dir/Vmy_design.cpp"
+T      2370 25830829  1620108428           0  1620108428           0 "obj_dir/Vmy_design.h"
+T      1863 25830833  1620108428           0  1620108428           0 "obj_dir/Vmy_design.mk"
+T      2027 25830830  1620108428           0  1620108428           0 "obj_dir/Vmy_design__Slow.cpp"
+T       664 25830827  1620108428           0  1620108428           0 "obj_dir/Vmy_design__Syms.cpp"
+T       910 25830828  1620108428           0  1620108428           0 "obj_dir/Vmy_design__Syms.h"
+T       327 25831106  1620108428           0  1620108428           0 "obj_dir/Vmy_design__ver.d"
+T         0        0  1620108428           0  1620108428           0 "obj_dir/Vmy_design__verFiles.dat"
+T      1604 25830832  1620108428           0  1620108428           0 "obj_dir/Vmy_design_classes.mk"

@@ -21,21 +21,9 @@ class Vmy_design_VerilatedVcd;
 VL_MODULE(Vmy_design) {
   public:
     
-    // PORTS
-    // The application code writes and reads these signals to
-    // propagate new values into/out from the Verilated model.
-    VL_IN8(i_clk,0,0);
-    VL_OUT8(o_led,7,0);
-    
-    // LOCAL SIGNALS
-    // Internals; generally not touched by application code
-    CData/*3:0*/ my_design__DOT__led_index;
-    
     // LOCAL VARIABLES
     // Internals; generally not touched by application code
-    CData/*0:0*/ __Vclklast__TOP__i_clk;
     CData/*0:0*/ __Vm_traceActivity[1];
-    static CData/*7:0*/ __Vtable1_o_led[16];
     
     // INTERNAL VARIABLES
     // Internals; generally not touched by application code
@@ -87,14 +75,9 @@ VL_MODULE(Vmy_design) {
   public:
     static void _eval_initial(Vmy_design__Syms* __restrict vlSymsp) VL_ATTR_COLD;
     static void _eval_settle(Vmy_design__Syms* __restrict vlSymsp) VL_ATTR_COLD;
-    static void _initial__TOP__2(Vmy_design__Syms* __restrict vlSymsp) VL_ATTR_COLD;
-    static void _sequent__TOP__1(Vmy_design__Syms* __restrict vlSymsp);
+    static void _initial__TOP__1(Vmy_design__Syms* __restrict vlSymsp) VL_ATTR_COLD;
   private:
-    static void traceChgSub0(void* userp, VerilatedVcd* tracep);
-    static void traceChgTop0(void* userp, VerilatedVcd* tracep);
     static void traceCleanup(void* userp, VerilatedVcd* /*unused*/);
-    static void traceFullSub0(void* userp, VerilatedVcd* tracep) VL_ATTR_COLD;
-    static void traceFullTop0(void* userp, VerilatedVcd* tracep) VL_ATTR_COLD;
     static void traceInitSub0(void* userp, VerilatedVcd* tracep) VL_ATTR_COLD;
     static void traceInitTop(void* userp, VerilatedVcd* tracep) VL_ATTR_COLD;
     void traceRegister(VerilatedVcd* tracep) VL_ATTR_COLD;

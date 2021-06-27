@@ -35,7 +35,7 @@ void Vmy_design::eval_step() {
             Verilated::debug(1);
             __Vchange = _change_request(vlSymsp);
             Verilated::debug(__Vsaved_debug);
-            VL_FATAL_MT("my_design.v", 3, "",
+            VL_FATAL_MT("my_design.v", 1, "",
                 "Verilated model didn't converge\n"
                 "- See DIDNOTCONVERGE in the Verilator manual");
         } else {
@@ -61,7 +61,7 @@ void Vmy_design::_eval_initial_loop(Vmy_design__Syms* __restrict vlSymsp) {
             Verilated::debug(1);
             __Vchange = _change_request(vlSymsp);
             Verilated::debug(__Vsaved_debug);
-            VL_FATAL_MT("my_design.v", 3, "",
+            VL_FATAL_MT("my_design.v", 1, "",
                 "Verilated model didn't DC converge\n"
                 "- See DIDNOTCONVERGE in the Verilator manual");
         } else {
@@ -70,32 +70,9 @@ void Vmy_design::_eval_initial_loop(Vmy_design__Syms* __restrict vlSymsp) {
     } while (VL_UNLIKELY(__Vchange));
 }
 
-VL_INLINE_OPT void Vmy_design::_sequent__TOP__1(Vmy_design__Syms* __restrict vlSymsp) {
-    VL_DEBUG_IF(VL_DBG_MSGF("+    Vmy_design::_sequent__TOP__1\n"); );
-    Vmy_design* const __restrict vlTOPp VL_ATTR_UNUSED = vlSymsp->TOPp;
-    // Variables
-    CData/*3:0*/ __Vtableidx1;
-    CData/*3:0*/ __Vdly__my_design__DOT__led_index;
-    // Body
-    __Vdly__my_design__DOT__led_index = vlTOPp->my_design__DOT__led_index;
-    __Vdly__my_design__DOT__led_index = ((0xdU < (IData)(vlTOPp->my_design__DOT__led_index))
-                                          ? 0U : (0xfU 
-                                                  & ((IData)(1U) 
-                                                     + (IData)(vlTOPp->my_design__DOT__led_index))));
-    __Vtableidx1 = vlTOPp->my_design__DOT__led_index;
-    vlTOPp->o_led = vlTOPp->__Vtable1_o_led[__Vtableidx1];
-    vlTOPp->my_design__DOT__led_index = __Vdly__my_design__DOT__led_index;
-}
-
 void Vmy_design::_eval(Vmy_design__Syms* __restrict vlSymsp) {
     VL_DEBUG_IF(VL_DBG_MSGF("+    Vmy_design::_eval\n"); );
     Vmy_design* const __restrict vlTOPp VL_ATTR_UNUSED = vlSymsp->TOPp;
-    // Body
-    if (((IData)(vlTOPp->i_clk) & (~ (IData)(vlTOPp->__Vclklast__TOP__i_clk)))) {
-        vlTOPp->_sequent__TOP__1(vlSymsp);
-    }
-    // Final
-    vlTOPp->__Vclklast__TOP__i_clk = vlTOPp->i_clk;
 }
 
 VL_INLINE_OPT QData Vmy_design::_change_request(Vmy_design__Syms* __restrict vlSymsp) {
@@ -117,8 +94,5 @@ VL_INLINE_OPT QData Vmy_design::_change_request_1(Vmy_design__Syms* __restrict v
 #ifdef VL_DEBUG
 void Vmy_design::_eval_debug_assertions() {
     VL_DEBUG_IF(VL_DBG_MSGF("+    Vmy_design::_eval_debug_assertions\n"); );
-    // Body
-    if (VL_UNLIKELY((i_clk & 0xfeU))) {
-        Verilated::overWidthError("i_clk");}
 }
 #endif  // VL_DEBUG
